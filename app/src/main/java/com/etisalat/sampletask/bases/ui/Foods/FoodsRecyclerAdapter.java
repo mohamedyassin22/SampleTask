@@ -64,9 +64,20 @@ public class FoodsRecyclerAdapter extends RecyclerView.Adapter<FoodsRecyclerAdap
     }
     public void addAll(List<Item> foodsItem) {
         int prevSize = getItemCount();
-
+        sort(foodsItem);
         this.foodsItem.addAll(foodsItem);
         notifyItemRangeInserted(prevSize, foodsItem.size());
+    }
+    public List<Item> sort(List<Item>foodsItem){
+        Collections.sort(foodsItem, new Comparator<Item>()
+        {
+            @Override
+            public int compare(Item item1, Item item2)
+            {
+                return item1.getName().compareToIgnoreCase(item2.getName());
+            }
+        });
+        return foodsItem;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
