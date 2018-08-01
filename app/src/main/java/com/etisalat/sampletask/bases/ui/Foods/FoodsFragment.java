@@ -23,7 +23,7 @@ import com.etisalat.sampletask.bases.data.DataRepository;
 import com.etisalat.sampletask.bases.data.model.Item;
 import com.etisalat.sampletask.bases.ui.MainActivity;
 import com.etisalat.sampletask.bases.util.Injection;
-
+import com.etisalat.sampletask.bases.Kotlin.Main2Activity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -149,6 +149,9 @@ public class FoodsFragment extends BaseFragment implements FoodsContract.View {
             case R.id.action_refresh:
                refreshFoods();
                 return true;
+                case R.id.action_kotlin:
+                Intent intent=new Intent(getActivity(),Main2Activity.class);
+                startActivity(intent);
 
             default:
                 return super.onOptionsItemSelected(item);

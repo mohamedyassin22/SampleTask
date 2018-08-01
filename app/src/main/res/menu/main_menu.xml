@@ -2,9 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/action_kotlin"
+        android:icon="@drawable/kotlin"
+        android:title="kotlin"
+        android:orderInCategory="300"
+        app:showAsAction="always">
 
-
-
+    </item>
 
     <item
         android:id="@+id/action_refresh"
