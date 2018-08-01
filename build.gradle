@@ -37,6 +37,7 @@ ext {
     butterknifeVersion = "8.8.1"
     retrofitVersion ="2.3.0"
     converterSimplexmlVersion ="2.3.0"
+    interceptorVersion = "3.4.1"
 
 }
 

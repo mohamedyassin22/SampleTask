@@ -34,6 +34,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-simplexml:$rootProject.ext.converterSimplexmlVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.interceptorVersion"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
