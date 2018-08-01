@@ -17,6 +17,7 @@ public abstract class BaseActivity<T extends BasePresenter>
         extends AppCompatActivity implements BasePresenterListener {
     protected T presenter;
     private ProgressDialog progressDialog;
+    public View layout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,11 +55,13 @@ public abstract class BaseActivity<T extends BasePresenter>
         progressDialog.show();
     }
 
-    protected void showSnackbar(String message, @NonNull View parentView) {
-        Snackbar snackbar = Snackbar.make(parentView, message, Snackbar.LENGTH_LONG);
-        View view = snackbar.getView();
-        TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
-        tv.setTextColor(Color.WHITE);
-        snackbar.show();
+     public void showSnackbar(String message) {
+        if (layout!=null) {
+            Snackbar snackbar = Snackbar.make(layout, message, Snackbar.LENGTH_LONG);
+            View view = snackbar.getView();
+            TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.WHITE);
+            snackbar.show();
+        }
     }
 }

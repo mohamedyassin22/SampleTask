@@ -34,6 +34,9 @@ ext {
     minSdkVersion = 14
     supportVersion = "27.1.0"
     googlePlayServicesVersion = "12.0.1"
+    butterknifeVersion = "8.8.1"
+    retrofitVersion ="2.3.0"
+    converterSimplexmlVersion ="2.3.0"
 
 }
 

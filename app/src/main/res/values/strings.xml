@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">SampleTask</string>
     <string name="pleasewait">Please Wait</string>
+    <string name="name">Name :</string>
+    <string name="cost">Price :</string>
+    <string name="description">Description :</string>
+    <string name="failureresponse">Something went wrong, please try again later.</string>
+    <string name="network_failure_msg">No network. Please try again later.</string>
+
+
 </resources>
