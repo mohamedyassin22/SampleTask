@@ -36,9 +36,9 @@ public class FoodsPresenter  implements FoodsContract.Presenter {
         view.showProgress();
         dataRepository.getMenuItem(context, new DataSource.GetMenuCallback() {
             @Override
-            public void onSuccess(List<Item> menuItems) {
+            public void onSuccess(List<Item> menuItems, String date) {
                 if(view!=null){
-                    view.showMenuItem(menuItems);
+                    view.showMenuItem(menuItems, date);
                     view.hideProgress();
                 }
             }

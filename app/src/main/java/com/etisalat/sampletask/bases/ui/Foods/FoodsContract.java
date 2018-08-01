@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface FoodsContract {
     interface View extends BasePresenterListener{
-        void showMenuItem(List<Item> foodItem);
+        void showMenuItem(List<Item> foodItem, String date);
 
     }
     interface Presenter extends BaseControllerListener{

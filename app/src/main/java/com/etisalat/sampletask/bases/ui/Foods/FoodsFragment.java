@@ -50,6 +50,8 @@ public class FoodsFragment extends BaseFragment implements FoodsContract.View {
     RecyclerView rvFoods;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.tvTime)
+    TextView tvTime;
 
 
 
@@ -102,12 +104,13 @@ public class FoodsFragment extends BaseFragment implements FoodsContract.View {
 
 
     @Override
-    public void showMenuItem(List<Item> foodItem) {
+    public void showMenuItem(List<Item> foodItem,String date) {
         if (shouldRefreshFoods) {
             recyclerAdapter.clear();
             shouldRefreshFoods = false;
         }
         recyclerAdapter.addAll(foodItem);
+        tvTime.setText(date);
 
 
 

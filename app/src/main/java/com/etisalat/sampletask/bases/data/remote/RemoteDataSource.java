@@ -38,10 +38,10 @@ public class RemoteDataSource implements DataSource {
             @Override
             public void onResponse(Call<Menu> call, Response<Menu> response) {
                 if (response.isSuccessful()){
-
+                    DateFormat df = new SimpleDateFormat("dd MM yyyy, HH:mm", Locale.ENGLISH);
 
                     Menu menu=response.body();
-                    getMenuCallback.onSuccess(menu.getFoodItem());
+                    getMenuCallback.onSuccess(menu.getFoodItem(),  df.format(response.headers().getDate("Date")));
                 }
                 else {
                     getMenuCallback.onFailure(new Throwable());

@@ -12,7 +12,7 @@ import java.util.List;
 public interface DataSource {
 
     interface GetMenuCallback{
-        void onSuccess(List<Item> menuItems);
+        void onSuccess(List<Item> menuItems, String date);
         void onFailure(Throwable throwable);
 
     }
